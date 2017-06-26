@@ -1,0 +1,24 @@
+name: crcns-python
+channels:
+  - conda-forge
+dependencies:
+  # Core scientific python
+  - python=3
+  - numpy
+  - matplotlib
+  - pandas
+  - pyqt
+
+  # Jupyter Environment
+  - notebook
+  - ipython
+  - jupyter_contrib_nbextensions
+
+  - pip:
+      # Neuro stuff
+      - mne
+
+      # Utilities
+      - download
+      - nbgrader
+      - tqdm
