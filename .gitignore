@@ -100,6 +100,7 @@ ENV/
 # mypy
 .mypy_cache/
 
-# OSX
+# Course custom ignores
 .DS_Store
 data/
+public_files/
