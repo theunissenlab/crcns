@@ -16,9 +16,12 @@ dependencies:
 
   - pip:
       # Neuro stuff
-      - mne
+      -e git://github.com/mne-tools/mne-python.git#egg=mne
+      -e git://github.com/choldgraf/mne-spikes.git#egg=mnespikes
 
       # Utilities
       - download
       - nbgrader
       - tqdm
+      
+      
