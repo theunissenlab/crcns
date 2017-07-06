@@ -288,8 +288,8 @@ axis image;
 %% Now we are going to repeat the eigenvalue fit using a ridge parameter l=lambda
 % You can just copy the code from above and modify. 
 
-% Let's try l=10, 30 and 100
-l = [10 30 100];
+% Let's try l=100, 1000 and 10000
+l = [0 100 1000 10000];
 
 for il=1:length(l);
     dinv_l{il} = diag(1./(ds + l(il)));

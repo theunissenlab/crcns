@@ -22,7 +22,7 @@ tlength = 15000;
 rawStim = single(mov(1:10,1:10,1:tlength));  % single converts to single precision
 rawStim = rawStim - mean(mean(mean(rawStim))); % Subtract mean.
 
-% Exercise 1. Using subplot plot the first 10 images.  Then plot images
+%% Exercise 1. Using subplot plot the first 10 images.  Then plot images
 % 10, 100, 1000, 10000.  Using these pictures comment on the temporal and spatial correlations.
 
 
@@ -31,11 +31,11 @@ rawStim = rawStim - mean(mean(mean(rawStim))); % Subtract mean.
 gparams = [.5 .5 0 5.5 0 .0909 .3 0]';
 [gabor, gabor90] = make3dgabor([10 10 1], gparams); 
 
-% Exercise 2. Plot the Gabor filter.
+%% Exercise 2. Plot the Gabor filter.
 
 
-%% Convolve the Gabor filter with the stimulus and add Gaussian noise to get a response with an SNR of 1
-SNR = 1;
+%% Convolve the Gabor filter with the stimulus and add Gaussian noise to get a response with an SNR of 0.5
+SNR = 0.5;
 gabor_vector = reshape(gabor, [10*10 1]);
 rawStim_vector = reshape(rawStim, [10*10 tlength]);
 resp = dotdelay(gabor_vector, rawStim_vector);
@@ -43,20 +43,19 @@ resp_pow = var(resp);
 resp = resp + sqrt(resp_pow/SNR)*randn(tlength,1);
 
 
-%% now we're going to get estimate the gabor using the analytical solution. the stimulus and response
-%
-% Exercise 3. First cross-correlate the response and the stimulus.  In this case there
-% is no time component.
+%% Exercise 3.  Recover the filter using the normal equation.  
+% First cross-correlate the response and the stimulus.  In this case there
+% is no time component. This is also the spike-triggered average or STA
 
 
-% Plot the cross product and compare to the filter
+% Plot the STA and compare to the filter
 
 
-%% Now calculate the stimulus auto-correlation and image it. What do you see?
+%% Now calculate the stimulus auto-correlation and image it. Explain what you see?
 
 
 %% Now normalize the cross-correlation by the auto-correlation to recover the filter
-% Try first using the matrix division operator
+% Try first using the matrix division operator \
 
 
 %% Excercise 4. Now we are going to try regularizing.
@@ -68,8 +67,9 @@ resp = resp + sqrt(resp_pow/SNR)*randn(tlength,1);
 
 
 
-% Find the solution using ridge regression look at different values for
-% lambda.
+%% Excercise 5. Ridge Solution.
+% Find the solution using ridge regression. Use values of lambda of 0, 100,
+% 1000, 10000.  Hint. Use the code you wrote for PCA regression.
 
 
 
