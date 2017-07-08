@@ -12,16 +12,16 @@ dependencies:
   # Jupyter Environment
   - notebook
   - ipython
-  - jupyter_contrib_nbextensions
 
   - pip:
       # Neuro stuff
-      -e git://github.com/mne-tools/mne-python.git#egg=mne
-      -e git://github.com/choldgraf/mne-spikes.git#egg=mnespikes
+      - '-e git+https://github.com/mne-tools/mne-python.git@master'
+      - '-e git+https://github.com/choldgraf/mne-spikes.git@master'
 
       # Utilities
       - download
       - nbgrader
       - tqdm
-      
-      
+
+      # Auditory analysis
+      - librosa
