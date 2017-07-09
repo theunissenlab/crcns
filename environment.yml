@@ -8,6 +8,8 @@ dependencies:
   - matplotlib
   - pandas
   - pyqt
+  - scipy
+  - scikit-image
 
   # Jupyter Environment
   - notebook
@@ -15,8 +17,8 @@ dependencies:
 
   - pip:
       # Neuro stuff
-      - '-e git+https://github.com/mne-tools/mne-python.git@master'
-      - '-e git+https://github.com/choldgraf/mne-spikes.git@master'
+      - git+git://github.com/mne-tools/mne-python.git@master
+      - git+git://github.com/choldgraf/mne-spikes.git@master
 
       # Utilities
       - download
@@ -24,4 +26,4 @@ dependencies:
       - tqdm
 
       # Auditory analysis
-      - librosa
+      # - librosa
