@@ -1,4 +1,5 @@
 CRCNS-python
 ------------
 
-http://beta.mybinder.org/v2/gh/theunissenlab/crcns/master
+Course binder:
+http://beta.mybinder.org/v2/gh/theunissenlab/crcns-student/master?filepath=python/getting_started.ipynb
