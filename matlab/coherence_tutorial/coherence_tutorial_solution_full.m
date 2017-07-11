@@ -7,13 +7,13 @@ vpath = fullfile(rootDir, 'validation');
 addpath(vpath);
 ppath = fullfile(rootDir, 'preprocessing');
 addpath(ppath);
-dataDir = fullfile(rootDir, '..', 'data'); %contains stim/response pairs
+dataDir = fullfile(rootDir, '../../', 'data'); %contains stim/response pairs
 stimsDir = fullfile(dataDir, 'all_stims'); %contains the .wav files
 
 
 %% The next three sections allow you to load and visualize single unit data from
 % The theunissen lab. Your goals are: 1. Get familiar with this data structure and
-% 2. Load you own data in a similar structure. 
+% 2. Load you own data in a similar st/ructure. 
 %  For the Theunissen data you can specify a directory for three brain
 %  regions and three example neurons in each.:
 %   'mld' is the avian auditory midbrain

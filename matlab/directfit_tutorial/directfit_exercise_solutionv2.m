@@ -13,7 +13,7 @@ vpath = fullfile(rootDir, 'validation');
 addpath(vpath);
 ppath = fullfile(rootDir, 'preprocessing');
 addpath(ppath);
-dataDir = fullfile(rootDir, '..', 'data'); %contains stim/response pairs
+dataDir = fullfile(rootDir, '../../', 'data'); %contains stim/response pairs
 stimsDir = fullfile(dataDir, 'all_stims'); %contains the .wav files
 
 %% load a 20x20x20000 natural movie
@@ -351,7 +351,7 @@ plot(diag(dinv_l{3}), 'g');
 hold off;
 legend('Full',sprintf('l=%d',l(1)), sprintf('l=%d',l(2)), sprintf('l=%d',l(3)));
 
-figure(18);
+figure(19);
 for il=1:3
     subplot(1,3,il);
     imagesc(reshape(myfiltersvd_l{il}, [10 10]));
@@ -383,7 +383,7 @@ rpredfull = corrcoef(predRespfull, testResp_noise);
 
 rpredmax = corrcoef(testResp, testResp_noise);
 
-figure(17);
+figure(20);
 hb = bar([rpredfull(2)./rpredmax(2), rpred{1}(2)./rpredmax(2), rpred{2}(2)./rpredmax(2), rpred{3}(2)./rpredmax(2)]);
 ha = gca;
 set(ha, 'XTickLabel', {'Full'; sprintf('l=%d', l(1)); sprintf('l=%d', l(2)); sprintf('l=%d', l(3))});
@@ -394,7 +394,7 @@ axis(f17_axis);
 grid on;
 
 % Diplay best prediction
-figure(18);
+figure(21);
 plot(testResp, 'k');
 hold on;
 plot(predResp{2}, 'r');

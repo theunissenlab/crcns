@@ -2,12 +2,12 @@
 %% preliminary stuff: get the directory we're in
 % and add the validation subdirectory to the path
 cpath = which('coherence_tutorial');
-[rootDir, name, ext, versn] = fileparts(cpath);
+[rootDir, name, ext] = fileparts(cpath);
 vpath = fullfile(rootDir, 'validation');
 addpath(vpath);
 ppath = fullfile(rootDir, 'preprocessing');
 addpath(ppath);
-dataDir = fullfile(rootDir, '../data'); %contains stim/response pairs
+dataDir = fullfile(rootDir, '../../data'); %contains stim/response pairs
 stimsDir = fullfile(dataDir, 'all_stims'); %contains the .wav files
 
 
