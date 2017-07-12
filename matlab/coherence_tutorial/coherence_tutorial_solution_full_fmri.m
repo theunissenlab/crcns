@@ -49,7 +49,7 @@ pairCount = length(srData.datasets); %# of stim/response pairs
 
 
 %% visualize the stimulus/response pairs by setting showSRPairs = 1
-showSRPairs = 0;
+showSRPairs = 1;
 if showSRPairs  
   %go through each pair in the dataset
   for k = 1:pairCount    
@@ -127,11 +127,17 @@ for k=1:pairCount
         
         % Plot the noises
         if (itrial == 1)
-            plot(conv(noise_d1(itrial, :), wind1), 'r--');
-            plot(conv(noise(itrial,:), wind1), 'r');
+%             plot(conv(noise_d1(itrial, :), wind1), 'r--');
+%             plot(conv(noise(itrial,:), wind1), 'r');
+%             
+%             % Plot the signal
+%             plot(conv(signal, wind1), 'b');
+            
+            plot(noise_d1(itrial, :), 'r--');
+            plot(noise(itrial,:), 'r');
             
             % Plot the signal
-            plot(conv(signal, wind1), 'b');
+            plot(signal, 'b');
             hold off;
         end
     end
