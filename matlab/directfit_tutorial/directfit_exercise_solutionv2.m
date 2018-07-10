@@ -387,10 +387,10 @@ figure(20);
 hb = bar([rpredfull(2)./rpredmax(2), rpred{1}(2)./rpredmax(2), rpred{2}(2)./rpredmax(2), rpred{3}(2)./rpredmax(2)]);
 ha = gca;
 set(ha, 'XTickLabel', {'Full'; sprintf('l=%d', l(1)); sprintf('l=%d', l(2)); sprintf('l=%d', l(3))});
-f17_axis = axis();
-f17_axis(3) = 0.95;
-f17_axis(4) = 1.0;
-axis(f17_axis);
+% f17_axis = axis();
+% f17_axis(3) = 0.95;
+% f17_axis(4) = 1.0;
+% axis(f17_axis);
 grid on;
 
 % Diplay best prediction

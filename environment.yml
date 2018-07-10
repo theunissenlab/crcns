@@ -11,7 +11,7 @@ dependencies:
   - scipy
   - scikit-image
   - scikit-learn
-  - librosa
+
 
   # Jupyter Environment
   - notebook
@@ -28,4 +28,5 @@ dependencies:
       - tqdm
 
       # Auditory analysis
-      # - librosa
+      - soundsig
+      - librosa
