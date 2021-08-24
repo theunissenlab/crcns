@@ -19,7 +19,7 @@ dependencies:
 
   - pip:
       # Neuro stuff
-      - git+https://github.com/ftheunissen/mne-spikes.git@master
+      - git+https://github.com/ftheunissen/mne-spikes.git
 
       # Utilities
       - download
